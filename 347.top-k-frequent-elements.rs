@@ -27,10 +27,14 @@ impl Solution {
 
         let mut result: Vec<i32> = Vec::new();
 
+        // for i in length reverse freq (use len for find highest frequency)
         for i in (1..freq.len()).rev() {
+            // for number in frequency
             for &nm in &freq[i] {
+                // insert number to result
                 result.push(nm);
 
+                // if result length == k return result
                 if result.len() == (k as usize) {
                     return result;
                 }
